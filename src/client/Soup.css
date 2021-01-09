@@ -1,0 +1,240 @@
+.riceContent{
+  width: 97vw;
+  height: 99vw;
+  background-color: rgb(255, 255, 255);
+  margin-left:10px;
+  margin-top: 10px;
+  
+}
+
+.riceContent header h1{
+  width: auto;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  margin-left:10px;
+  margin-top: 10px;
+  position: relative;
+  left:80mm;
+  font-size: 50px;
+  font-family:  Gabriola;
+  
+}
+
+.riceContent #left {
+  width: 20mm;
+  top:65mm;
+  height: 100px;
+  padding-left: 60mm;
+  padding-right: 70mm;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left:150mm;
+  margin-left:40mm;
+  padding-bottom: 75.5vw;
+}
+
+.riceContent #left p{
+  position: relative;
+  right:50px;
+  font-family:  Gabriola;
+}
+
+.riceContent #right ul{
+  width:24vw;
+  position: relative;
+  right:240mm;
+  bottom:30mm;
+}
+
+
+
+
+.riceContent #right li{
+  display: inline;
+  
+}
+
+.riceContent #right li a{
+  text-decoration: none;
+  padding-right: 20mm;
+}  
+.riceContent #right {
+  width: 20mm;
+  
+  padding-left: 80mm;
+  padding-right: 20mm;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top:28mm;
+  right:90mm;
+  margin-right:2mm;
+  margin-left:10mm;
+  margin-top: 20px;
+  padding-bottom: 40vw;
+
+  
+}
+
+.riceContent #right a {
+  font-size:30px;
+  margin-right:100px;
+  position: relative;
+  right:100px;
+  
+  
+}
+
+.riceContent #right img {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 4mm ridge rgba(0, 17, 255, 0.6);
+  top:20mm;
+  left:20mm;
+  right:20px;
+  box-shadow: 0 0 20px rgb(17, 0, 17);
+  border-radius: 14%;
+  
+}
+
+#right .meals{
+  background-color:rgb(253, 253, 253);
+  margin-bottom: 20px;
+  width: 39vw;
+  padding-right:5px ;
+  position: relative;
+  top:40mm;
+  right: 30px;
+  border: 2mm ridge rgb(19, 152, 230);
+  box-shadow: 0 0 20px rgb(17, 0, 17);
+  border-radius: 14%;
+}
+
+#right .meals li{
+  display: inline;
+}
+#right ul{
+  background-color:rgb(255, 255, 255);
+  width: 39vw;
+  position: relative;
+  left: 105mm;
+ 
+}
+
+.riceContent #left p{
+    width: 200px;
+    font-size:30px;
+    position: relative;
+    right: 30mm;
+    top:40mm;
+    
+}
+
+
+
+.riceContent #left input{
+  width: 300px;
+  height: 35px;
+  margin-bottom:30px ;
+  margin-top:10px ;
+  padding-left:20px ;
+  position: relative;
+  right: 50mm;
+  top:30mm;
+  bottom:70px;
+  font-size:20px;
+  box-shadow: 0 0 20px rgb(17, 0, 17);
+  border-radius: 14%;
+}
+
+.riceContent #left label{
+ font-size:25px;
+ position: relative;
+ top:25mm;
+ right: 50mm;
+ bottom:70px;
+
+}
+
+.riceContent #left label a{
+  font-size:25px;
+  display:flex;
+  width: 240px;
+  margin-bottom: 25px;
+  
+ 
+}
+
+.riceContent #left button{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(96, 96, 104);
+    position: relative;
+    right: 50mm;
+    top:100px;
+    font-size: 20px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgb(17, 0, 17);
+    border-radius: 14%;
+}
+
+.riceContent #left button:hover{
+  cursor:pointer;
+ 
+  }
+
+  .riceContent #left .resv h3{
+      width: 400px;
+      height: 30px;
+     border: 1px solid rgb(18, 147, 207);
+     font-size:20px;
+     padding-top: 15px;
+     margin-right: 25px;
+     margin: 10px;
+     margin-left: 20px;
+     position: relative;
+     right:20px;
+     font-size: 20px;
+     
+     
+      }
+
+      .riceContent #left .resv {
+          width: 400px;
+          height: 250px;
+       background-color:rgb(255, 255, 255);
+         font-size:20px;
+         padding-top: 15px;
+         margin-right: 25px;
+         margin: 10px;
+         margin-left: 20px;
+         position: absolute;
+         right:120px;
+         top: 900px;
+      
+        
+         
+          }
+
+          @media (min-width: 375px) and (max-width: 767px) 
+          {
+            .riceContent header h1{
+              
+              position: relative;
+              float:right;
+            }
+            .riceContent #right img {
+              position: relative;
+              width: 150px;
+              height: 100px;
+              border: 4mm ridge rgba(0, 17, 255, 0.6);
+              top:20mm;
+              left:93mm;
+              right:20px;
+              box-shadow: 0 0 20px rgb(17, 0, 17);
+              border-radius: 14%;
+              
+            }
+           
+   
+           }
