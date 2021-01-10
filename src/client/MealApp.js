@@ -3,7 +3,7 @@ import "./MealApp.css";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
-export function MealApp() {
+export function MealApp() {    
  
         return (
             <>
@@ -14,7 +14,7 @@ export function MealApp() {
                         <ul>
                         <li><Link to="/">main</Link></li>
                         <li><Link to="/meals">meals</Link></li>
-                        <li><a href="#button">contact</a></li>
+                        <li><a href="#button">contact</a></li>    
                         </ul>
                 </header>
                 <body>
