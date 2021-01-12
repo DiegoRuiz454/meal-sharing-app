@@ -10,7 +10,7 @@ export function MealApp() {
             <div className="content">
                 <header id="header">MealApp <br></br><br></br>
                          welcome to this food page <br></br><br></br>
-                         <img src="public/assets/images/hyf.png" alt="" width="20" height="20"/>
+                         <img src="public/assets/images/hyf.png"  width="20" height="20"/>   
                         <ul>
                         <li><Link to="/">main</Link></li>
                         <li><Link to="/meals">meals</Link></li>
