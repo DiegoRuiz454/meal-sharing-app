@@ -30,32 +30,6 @@ router.post("/add", async (request, response) => {
   }
 });
 
-// router to show the new  api meal added
-
-router.get("/show", async (request, response) => {
-  try {
-    // knex syntax for selecting things. Look up the documentation for knex for further info
-    const titles = await (await knex("meals_org").select("title"));
-    response.json(titles);
-  } catch (error) {
-    throw error;
-
-  }
-});
-
-//create an api to get the reservations items from the database
-  
-router.get("/showReservations", async (request, response) => {
-  try {  
-    // knex syntax for selecting things. Look up the documentation for knex for further info
-    const reservas = await (await knex("reservations").select("name").select("phone").select("email").select("guests"));
-    response.json(reservas);  
-    
-  } catch (error) {    
-    throw error;
-
-  }
-});
 
 router.get("/:id", async (request, response) => {
   try {
@@ -68,26 +42,18 @@ router.get("/:id", async (request, response) => {
   }
 });
 
-//router to post the a reservation
+// router to show the new  api meal added
 
-router.post("/addReservation", async (request, response) => {
+router.get("/show", async (request, response) => {
   try {
-    console.log(request.body);
-    const newReservation = await knex("reservations").insert({
-      "name":request.body.name,
-      "phone":request.body.phone, 
-      "email":request.body.email,
-      "guests":request.body.guests
-  });
-    response.json(newReservation)
+    // knex syntax for selecting things. Look up the documentation for knex for further info
+    const titles = await (await knex("meals_org").select("title"));
+    response.json(titles);
   } catch (error) {
     throw error;
+
   }
 });
-
-
-
-
 
 
 

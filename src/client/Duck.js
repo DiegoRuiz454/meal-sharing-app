@@ -15,14 +15,14 @@ export function Duck() {
 
     
     const addReservation = () =>{
-        Axios.post('http://localhost:3000/api/meals/addReservation',
+        Axios.post('http://localhost:5000/api/reservations/add',
        {name:name, phone:phone, email:email, guests:guests}).then(()=>
        alert("New Reservation Added"))
        console.log(name+phone+email+guests)
       };
 
       const showResv = () =>{
-        Axios.get('http://localhost:3000/api/meals/showReservations').then((response)=> {
+        Axios.get('http://localhost:5000/api/reservations').then((response)=> {
        setShowReservation(response.data);
        console.log(showReservation)
       });
@@ -30,7 +30,7 @@ export function Duck() {
 
       useEffect(()=>{
         (async () =>{
-          const reserv = await fetch ('http://localhost:5000/api/meals/showReservations');
+          const reserv = await fetch ('http://localhost:5000/api/reservations');
           const jsonReserv = await reserv.json();
           //console.log(jsonResponse);
           setShowReservation( prev => {
@@ -109,14 +109,14 @@ export function Duck() {
                {
                 duck.map(meal => {
                 return (
-                <div className="meals">
+                <div className="meals"> 
                     
                  <li>{meal.title}</li> <br></br><br></br>
                  <li>{meal.description}</li> 
                 </div>)
             })}
             </ul> 
-            <img src="\src\client\assets\images\duck.png" alt="" />
+            <img src="public/assets/images/duck.png" alt="" />
                 </right>
 </div>
            

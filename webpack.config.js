@@ -1,12 +1,19 @@
 require('dotenv').config();
 const path = require('path');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// replace,common,terser are impemented to optimize the code and to recude the bundle.js 
+
+
 const outputDirectory = 'dist';
 
 module.exports = {
+  
+
   entry: ['babel-polyfill', './src/client/index.js'],
   output: {
     path: path.join(__dirname, outputDirectory),
@@ -49,13 +56,18 @@ module.exports = {
     dns: 'empty',
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    
+     new webpack.DefinePlugin({
+      'process.env.NODE_ENV' : JSON.stringify('production'),
+     }),
+     new UglifyJsPlugin(),
+     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico',
-    }),
+      }),
     new CaseSensitivePathsPlugin(),
     new Dotenv({
       safe: false,
     }),
-  ],
+   ],
 };

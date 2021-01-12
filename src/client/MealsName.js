@@ -13,14 +13,14 @@ export function MealsName() {
     const [showList, setShowList] = useState ([]);
     
     const addMeal = () =>{
-      Axios.post('http://localhost:3000/api/meals/add',
+      Axios.post('http://localhost:5000/api/meals/add',
      {title:title, description:description}).then(()=>
      alert("New Meal Added"))
      console.log(addMeal)
     };
 
      const showMelas = () =>{
-      Axios.get('http://localhost:3000/api/meals/show').then((response)=> {
+      Axios.get('http://localhost:5000/api/meals').then((response)=> {
      setShowList(response.data);
      console.log(showList)
     });
@@ -40,8 +40,9 @@ export function MealsName() {
  
         return (
             <div className="content">
-              
-              <h4>Our Meals</h4>
+              <h4>MealApp </h4>
+           
+              <h4>welcome to this food page </h4>
 
              <ul className="menu">
               <li><Link to="/">main</Link></li>   

@@ -5,6 +5,9 @@ const path = require("path");
 const mime = require('mime');
 
 const mealsRouter = require("./api/meals");
+const reservationsRouter = require("./api/reservations");
+
+
 const buildPath = path.join(__dirname, "../../dist");
 const port = process.env.PORT || 3000;
 const cors = require("cors");
@@ -16,6 +19,8 @@ res.set('content-type', type);
 const staticOptions = {
   setHeaders: setHeadersOnStatic
 }
+
+
 // this path is to show correctly de imagen and files into heroku
 
 app.use(express.static(path.join(__dirname, 'public'), staticOptions));
@@ -32,6 +37,7 @@ app.use(express.json());
 app.use(cors());
 
 router.use("/meals", mealsRouter);
+router.use("/reservations", reservationsRouter);
 
 app.use(process.env.API_PATH, router);
 
