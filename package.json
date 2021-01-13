@@ -6,11 +6,11 @@
     "node": "8.11.1"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "npm run build && node ./src/backend/server",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon ./src/backend/server",
-    "dev": "npm run build && node ./src/backend/server"
+    "dev": "webpack --mode production"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
