@@ -106,7 +106,7 @@ export function Fruit() {
                    </ul>
                     
                     
-                 <ul>
+                 
                {
                 fruit.map(meal => {
                 return (
@@ -116,8 +116,8 @@ export function Fruit() {
                  <li>{meal.description}</li> 
                 </div>)
             })}
-            </ul> 
-            <img src="\src\client\assets\images\fruits.jpg" alt="" />
+            
+            <p>this is fruit</p>
                 </right>
 </div>
            

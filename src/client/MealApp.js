@@ -8,9 +8,10 @@ export function MealApp() {
         return (
             <>
             <div className="content">
-                <header id="header">MealApp <br></br><br></br>
-                         welcome to this food page <br></br><br></br>
-                         <img src="public/assets/images/hyf.png"  width="20" height="20"/>   
+                <header id="header"> <br></br><br></br>
+                            <p>mealApp</p> 
+                         <h1>welcome to this food page, meal sharing is you best option</h1> <br></br><br></br>
+                          
                         <ul>
                         <li><Link to="/">main</Link></li>
                         <li><Link to="/meals">meals</Link></li>
@@ -20,30 +21,27 @@ export function MealApp() {
                 <body>
                     <div className="left">
                          <h1>Rice Pudding</h1><br></br><br></br>
-                         <><img src="public/assets/images/rice.jpg" alt="" /></>
+                         <p>this is pudding</p>
 
                          <h1>Soup Meat</h1><br></br><br></br>
-                         <><img src="public/assets/images/soup.png" alt="" /></>
+                         <p>this is Meat</p>
                          
                      
                     </div>
                     <div className="right">
                          <h1>Duck with Onion</h1><br></br><br></br>
-                         <><img src="public/assets/images/duck.png" alt="" /></>
+                         <p>this is onion</p>
 
 
                          <h1>Fruit salad</h1><br></br><br></br>
-                         <><img src="public/assets/images/fruits.jpg" alt="" /></>
+                         <p>this is salad</p>
 
                     </div>
                 </body>
                 <footer>
                 <ul className="img">
-                          <h1><a id="button" href="#"> CONTACT US</a> </h1>
-                          <li><a href="http://www.instagram.com"><img src="public/assets/images/instagram.jpg" alt="" /></a></li>
-                          <li><a href="http://www.twitter.com"><img src="public/assets/images/twiter.png" alt="" /></a></li>
-                          <li><a href="http://www.facebook.com"><img src="public/assets/images/facebook.png" alt="" /></a></li>
-                          <li><a href="https://www.hackyourfuture.dk/"><img src="public/assets/images/logoAnna.png" alt="" /></a></li>
+                          <h1><div id="button" href="#"> Copyright meal Sharing app Diego Ruiz </div> </h1>
+                          
                         </ul>
                 </footer>
            </div>
@@ -55,4 +53,3 @@ export function MealApp() {
             
         );
     }
-

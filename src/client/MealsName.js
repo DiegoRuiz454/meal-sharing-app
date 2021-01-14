@@ -40,9 +40,9 @@ export function MealsName() {
  
         return (
             <div className="content">
-              <h4>MealApp </h4>
+              
            
-              <h4>welcome to this food page </h4>
+              <h4>our meals</h4>
 
              <ul className="menu">
               <li><Link to="/">main</Link></li>   
