@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 
 export function Duck() {
-  const [fruit, setFruit] = useState ([])
+  const [duck, setDuck] = useState ([])
   const [name, setName] = useState ("");
   const [phone, setPhone] = useState ("");
   const [email, setEmail] = useState ("");
@@ -43,10 +43,10 @@ export function Duck() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('http://localhost:5000/api/meals/4');
+        const response = await fetch ('http://localhost:5000/api/meals/3');
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
-        setFruit( prev => {
+        setDuck( prev => {
             return jsonResponse;
         })
       })();
@@ -109,7 +109,7 @@ export function Duck() {
                   
                
              {
-              fruit.map(meal => {
+              duck.map(meal => {
               return (
               <div className="meals">
                   

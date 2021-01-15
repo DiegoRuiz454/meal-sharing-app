@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 
 export function Soup() {
-  const [fruit, setFruit] = useState ([])
+  const [soup, setSoup] = useState ([])
   const [name, setName] = useState ("");
   const [phone, setPhone] = useState ("");
   const [email, setEmail] = useState ("");
@@ -42,10 +42,10 @@ export function Soup() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('http://localhost:5000/api/meals/4');
+        const response = await fetch ('http://localhost:5000/api/meals/2');
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
-        setFruit( prev => {
+        setSoup( prev => {
             return jsonResponse;
         })
       })();
@@ -108,7 +108,7 @@ export function Soup() {
                   
                
              {
-              fruit.map(meal => {
+              soup.map(meal => {
               return (
               <div className="meals">
                   

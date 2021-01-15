@@ -6,7 +6,7 @@ import Axios from 'axios';
 
 
 export function Rice() {
-  const [fruit, setFruit] = useState ([])
+  const [rice, setRice] = useState ([])
   const [name, setName] = useState ("");
   const [phone, setPhone] = useState ("");
   const [email, setEmail] = useState ("");
@@ -42,10 +42,10 @@ export function Rice() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('http://localhost:5000/api/meals/4');
+        const response = await fetch ('http://localhost:5000/api/meals/1');
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
-        setFruit( prev => {
+        setRice( prev => {
             return jsonResponse;
         })
       })();
@@ -108,7 +108,7 @@ export function Rice() {
                   
                
              {
-              fruit.map(meal => {
+              rice.map(meal => {
               return (
               <div className="meals">
                   
