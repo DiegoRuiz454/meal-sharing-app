@@ -8,10 +8,7 @@ const reservationsRouter = require("./api/reservations");
 
 
 const buildPath = path.join(__dirname, "../../dist");
-
-app.listen(process.env.PORT || 3000, () =>{
-  console.log("are you conected!");
-});
+const port = process.env.PORT || 3000;
 const cors = require("cors");
 
 // Serve the built client html
