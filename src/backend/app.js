@@ -3,6 +3,7 @@ const app = express();
 const router = express.Router();
 const path = require("path");
 
+
 const mealsRouter = require("./api/meals");
 const reservationsRouter = require("./api/reservations");
 
@@ -29,14 +30,7 @@ router.use("/reservations", reservationsRouter);
 app.use(process.env.API_PATH, router);
 
 // for the frontend. Will first be covered in the react class
-app.use("*", (err, req, res, next) => {
-  res.status(err.status || 500);
-  res.json({
-    error : {
-      status: err.status || 500,
-      message: err.message,
-    },
-  });
+app.use("*", (req, res) => {
   res.sendFile(path.join(`${buildPath}/index.html`));
 });
 
