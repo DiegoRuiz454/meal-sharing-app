@@ -29,13 +29,7 @@ export function MealsName() {
 
    useEffect(()=>{
         (async () =>{
-          const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals', {
-            headers : { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             }
-      
-          });
+          const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals', );
           const jsonResponse = await response.json();
           //console.log(jsonResponse);
           setMeals( prev => {
