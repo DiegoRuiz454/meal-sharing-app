@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const path = require("path");
-//new item
-const bodyParser = require("body-parser");
+
 
 const mealsRouter = require("./api/meals");
 const reservationsRouter = require("./api/reservations");
@@ -13,10 +12,7 @@ const buildPath = path.join(__dirname, "../../dist");
 const port = process.env.PORT || 3000;
 const cors = require("cors");
 
-//new item
-app.use(bodyParser.urlencoded({ extended: false }));
-//new item
-app.use(bodyParser.json());
+
 
 
 // Serve the built client html
