@@ -30,7 +30,13 @@ export function Rice() {
 
     useEffect(()=>{
       (async () =>{
-        const reserv = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations');
+        const reserv = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations', {
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+    
+        });
         const jsonReserv = await reserv.json();
         //console.log(jsonResponse);
         setShowReservation( prev => {
@@ -42,7 +48,13 @@ export function Rice() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals/1');
+        const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals/1', {
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+    
+        });
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
         setRice( prev => {

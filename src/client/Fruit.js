@@ -30,7 +30,13 @@ export function Fruit() {
 
       useEffect(()=>{
         (async () =>{
-          const reserv = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations');
+          const reserv = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations', {
+            headers : { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+             }
+      
+          });
           const jsonReserv = await reserv.json();
           //console.log(jsonResponse);
           setShowReservation( prev => {
