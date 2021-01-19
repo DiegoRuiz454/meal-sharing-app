@@ -1,7 +1,6 @@
 require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -72,7 +71,6 @@ module.exports = {
      new webpack.DefinePlugin({
       'process.env.NODE_ENV' : JSON.stringify('production'),
      }),
-     new UglifyJsPlugin(),
      new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico',
