@@ -15,14 +15,14 @@ export function Fruit() {
 
     
     const addReservation = () =>{
-        Axios.post('http://localhost:5000/api/reservations/add',
+        Axios.post('/api/reservations/add',
        {name:name, phone:phone, email:email, guests:guests}).then(()=>
        alert("New Reservation Added"))
        console.log(name+phone+email+guests)
       };
 
       const showResv = () =>{
-        Axios.get('http://localhost:5000/api/reservations').then((response)=> {
+        Axios.get('/api/reservations').then((response)=> {
        setShowReservation(response.data);
        console.log(showReservation)
       });
@@ -30,7 +30,7 @@ export function Fruit() {
 
       useEffect(()=>{
         (async () =>{
-          const reserv = await fetch ('http://localhost:5000/api/reservations');
+          const reserv = await fetch ('/api/reservations');
           const jsonReserv = await reserv.json();
           //console.log(jsonResponse);
           setShowReservation( prev => {
@@ -42,7 +42,7 @@ export function Fruit() {
      
     useEffect(()=>{
         (async () =>{
-          const response = await fetch ('http://localhost:5000/api/meals/4');
+          const response = await fetch ('/api/meals/4');
           const jsonResponse = await response.json();
           //console.log(jsonResponse);
           setFruit( prev => {
