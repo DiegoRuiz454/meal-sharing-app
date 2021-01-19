@@ -22,7 +22,7 @@ export function Soup() {
     };
 
     const showResv = () =>{
-      Axios.get('/api/reservations').then((response)=> {
+      Axios.get('http://localhost:5000/api/reservations').then((response)=> {
      setShowReservation(response.data);
      console.log(showReservation)
     });
@@ -30,7 +30,7 @@ export function Soup() {
 
     useEffect(()=>{
       (async () =>{
-        const reserv = await fetch ('/api/reservations');
+        const reserv = await fetch ('http://localhost:5000/api/reservations');
         const jsonReserv = await reserv.json();
         //console.log(jsonResponse);
         setShowReservation( prev => {
@@ -42,7 +42,7 @@ export function Soup() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('/api/meals/2');
+        const response = await fetch ('http://localhost:5000/api/meals/2');
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
         setSoup( prev => {
