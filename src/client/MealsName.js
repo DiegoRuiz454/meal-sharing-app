@@ -13,7 +13,7 @@ export function MealsName() {
     const [showList, setShowList] = useState ([]);
     
     const addMeal = () =>{
-      Axios.post('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals/add',
+      Axios.post('http://localhost:5000/api/meals/add',
      {title:title, description:description}).then(()=>
      alert("New Meal Added"))
      console.log(addMeal)
@@ -29,7 +29,7 @@ export function MealsName() {
 
    useEffect(()=>{
         (async () =>{
-          const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals');
+          const response = await fetch ('http://localhost:5000/api/meals');
           const jsonResponse = await response.json();
           //console.log(jsonResponse);
           setMeals( prev => {
