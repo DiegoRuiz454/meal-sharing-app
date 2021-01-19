@@ -23,7 +23,7 @@ export function Duck() {
     };
 
     const showResv = () =>{
-      Axios.get('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations').then((response)=> {
+      Axios.get('http://localhost:5000/api/reservations').then((response)=> {
      setShowReservation(response.data);
      console.log(showReservation)
     });
