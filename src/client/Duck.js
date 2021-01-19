@@ -16,14 +16,14 @@ export function Duck() {
 
   
   const addReservation = () =>{
-      Axios.post('/api/reservations/add',
+      Axios.post('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations/add',
      {name:name, phone:phone, email:email, guests:guests}).then(()=>
      alert("New Reservation Added"))
      console.log(name+phone+email+guests)
     };
 
     const showResv = () =>{
-      Axios.get('/api/reservations').then((response)=> {
+      Axios.get('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations').then((response)=> {
      setShowReservation(response.data);
      console.log(showReservation)
     });
@@ -31,7 +31,7 @@ export function Duck() {
 
     useEffect(()=>{
       (async () =>{
-        const reserv = await fetch ('/api/reservations');
+        const reserv = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/reservations');
         const jsonReserv = await reserv.json();
         //console.log(jsonResponse);
         setShowReservation( prev => {
@@ -43,7 +43,7 @@ export function Duck() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('/api/meals/3');
+        const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals/3');
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
         setDuck( prev => {
