@@ -11,6 +11,13 @@
   
 }
 
+body{
+  background-image: url("https://image.freepik.com/vector-gratis/fondo-comida-smarthphone-supermercado_125540-324.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .content .menu li {
   display: inline;
   margin-left:130px;

@@ -7,6 +7,13 @@
   
 }
 
+body{
+  background-image: url("https://image.freepik.com/vector-gratis/fondo-comida-smarthphone-supermercado_125540-324.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .riceContent header h1{
   width: auto;
   height: auto;
@@ -67,6 +74,10 @@
   top:80px;
   right:150mm;
   padding-left:30px;
+  background-image: url("https://image.freepik.com/vector-gratis/fondo-comida-smarthphone-supermercado_125540-324.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }  
 .riceContent #right {
   width: 30mm;
@@ -130,6 +141,10 @@
   width: 39vw;
   position: relative;
   left:60mm;
+  background-image: url("https://image.freepik.com/vector-gratis/fondo-comida-smarthphone-supermercado_125540-324.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
  
 }
 

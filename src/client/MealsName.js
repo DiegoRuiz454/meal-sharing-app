@@ -13,14 +13,14 @@ export function MealsName() {
     const [showList, setShowList] = useState ([]);
     
     const addMeal = () =>{
-      Axios.post('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals/add',
+      Axios.post('/api/meals/add',
      {title:title, description:description}).then(()=>
      alert("New Meal Added"))
      console.log(addMeal)
     };
      //heroku example
      const showMelas = () =>{
-      Axios.get('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals').then((response)=> {
+      Axios.get('/api/meals').then((response)=> {
      setShowList(response.data);
      console.log(showList)
     });
@@ -29,7 +29,7 @@ export function MealsName() {
 
    useEffect(()=>{
         (async () =>{
-          const response = await fetch ('https://mealsharingapp-diegoruiz454.herokuapp.com/api/meals', );
+          const response = await fetch ('/api/meals', );
           const jsonResponse = await response.json();
           //console.log(jsonResponse);
           setMeals( prev => {
