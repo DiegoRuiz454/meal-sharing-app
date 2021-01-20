@@ -17,7 +17,7 @@ export function Reservations() {
   const addReservation = () =>{
       Axios.post('/api/reservations/add',
      {name:name, phone:phone, email:email, guests:guests}).then(()=>
-     alert("New Reservation Added"))
+     alert("Your reservation has been successfully added to our database. "))
      console.log(name+phone+email+guests)
     };
 
@@ -60,7 +60,7 @@ export function Reservations() {
               <left id="left">
                  
                
-               <p>add a new reservation</p><br></br><br></br>
+               <p>Add a new reservation</p><br></br><br></br>
               
                <label>Name:</label>
                <input type="text" onChange={(event) => {setName(event.target.value);

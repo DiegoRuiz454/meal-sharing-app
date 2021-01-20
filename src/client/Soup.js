@@ -17,7 +17,7 @@ export function Soup() {
   const addReservation = () =>{
       Axios.post('/api/reservations/add',
      {name:name, phone:phone, email:email, guests:guests}).then(()=>
-     alert("New Reservation Added"))
+     alert("Your reservation has been successfully added to our database."))
      console.log(name+phone+email+guests)
     };
 

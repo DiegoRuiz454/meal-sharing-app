@@ -15,7 +15,7 @@ export function MealsName() {
     const addMeal = () =>{
       Axios.post('/api/meals/add',
      {title:title, description:description}).then(()=>
-     alert("New Meal Added"))
+     alert("Your new meal has been successfully added to our database."))
      console.log(addMeal)
     };
      //heroku example
