@@ -46,6 +46,7 @@ export function MealsName() {
 
              <ul className="menu">
               <li><Link to="/">main</Link></li>   
+              <li><Link to="/reservations">Reservations</Link></li>
               <li><Link to="meals/1">Rice</Link></li>
               <li><Link to="/meals/2">Soup</Link></li>
               <li><Link to="meals/3">Duck</Link></li>

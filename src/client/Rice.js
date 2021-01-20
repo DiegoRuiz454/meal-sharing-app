@@ -103,6 +103,7 @@ export function Rice() {
                    <li><Link to="/meals/2">Soup</Link></li>
                    <li><Link to="/meals/3">Duck</Link></li>
                    <li><Link to="/meals/4">Fruit</Link></li>
+                   <li><Link to="/reservations">Reservations</Link></li>
                  </ul>
                   
                   
@@ -117,10 +118,14 @@ export function Rice() {
               </div>)
           })}
           
-          <p>this is rice pudding</p>
+          <p>Rice pudding is a dish made from rice mixed with water
+            or milk and other ingredients such as cinnamon, vanilla 
+            and raisins. Variants are used for either 
+            desserts or dinners. When used as a dessert, it is
+            commonly combined with a sweetener such as sugar.</p>
               </right>
 </div>
          
           
       );
-  }
+}

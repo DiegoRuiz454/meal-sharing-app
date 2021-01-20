@@ -115,6 +115,9 @@ body{
   right:60mm;
   box-shadow: 0 0 20px rgb(17, 0, 17);
   border-radius: 14%;
+  font-family: Gabriola;
+  font-size: 23px;
+  font-weight: 500;
   
 }
 
@@ -127,7 +130,7 @@ body{
   top:10mm;
   bottom: 20mm;
   right: 75mm;
-  border: 2mm ridge rgb(19, 152, 230);
+  border: 2mm ridge rgb(7, 148, 230);
   box-shadow: 0 0 20px rgb(17, 0, 17);
   border-radius: 14%;
 }

@@ -103,6 +103,7 @@ export function Fruit() {
                    <li><Link to="/meals/1">Rice</Link></li>
                    <li><Link to="/meals/2">Soup</Link></li>
                    <li><Link to="/meals/3">Duck</Link></li>
+                   <li><Link to="/reservations">Reservations</Link></li>
                    </ul>
                     
                     
@@ -117,7 +118,11 @@ export function Fruit() {
                 </div>)
             })}
             
-            <p>this is fruit</p>
+            <p>Fruit salad is a dish consisting of various kinds of fruit,
+              sometimes served in a liquid, either their own juices or a syrup.
+              In different forms, fruit salad can be served as an appetizer, 
+              a side salad, or a dessert. When served as an appetizer or dessert,
+              a fruit salad.</p>
                 </right>
 </div>
            

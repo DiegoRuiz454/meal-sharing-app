@@ -6,6 +6,7 @@ import { Soup } from "./Soup.js";
 import { Rice } from "./Rice.js";
 import { Duck } from "./Duck.js";
 import { Fruit } from "./Fruit.js";
+import { Reservations } from "./Reservations.js";
 
 
 function App() {
@@ -35,7 +36,11 @@ function App() {
 
       <Route exact path="/meals/4">
       <Fruit></Fruit>
-      </Route>     
+      </Route>
+
+      <Route exact path="/reservations">
+      <Reservations></Reservations>
+      </Route>      
       
     </Router>
   );

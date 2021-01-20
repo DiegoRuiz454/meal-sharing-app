@@ -103,6 +103,7 @@ export function Soup() {
                    <li><Link to="/meals/1">Rice</Link></li>
                    <li><Link to="/meals/3">Duck</Link></li>
                    <li><Link to="/meals/4">Fruit</Link></li>
+                   <li><Link to="/reservations">Reservations</Link></li>
                  </ul>
                   
                   
@@ -117,7 +118,11 @@ export function Soup() {
               </div>)
           })}
           
-          <p>this is Soup</p>
+          <p>The best cuts of meat to use are chuck roast, chuck shoulder, 
+             chuck-eye roast or top chuck. These cuts will result in meltingly
+            tender beef that you can cut with a spoon. Using beef
+            stew meat is not recommended. It is a combination of cuts of
+            meat that right for this soup.</p>
               </right>
 </div>
          

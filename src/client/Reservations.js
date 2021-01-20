@@ -1,13 +1,12 @@
 import React from 'react';
-import "./Duck.css";
+import "./Reservations.css";
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Axios from 'axios';
 
 
-
-export function Duck() {
-  const [duck, setDuck] = useState ([])
+export function Reservations() {
+  const [rice, setRice] = useState ([])
   const [name, setName] = useState ("");
   const [phone, setPhone] = useState ("");
   const [email, setEmail] = useState ("");
@@ -31,7 +30,7 @@ export function Duck() {
 
     useEffect(()=>{
       (async () =>{
-        const reserv = await fetch ('/api/reservations',);
+        const reserv = await fetch ('/api/reservations', );
         const jsonReserv = await reserv.json();
         //console.log(jsonResponse);
         setShowReservation( prev => {
@@ -43,10 +42,10 @@ export function Duck() {
    
   useEffect(()=>{
       (async () =>{
-        const response = await fetch ('/api/meals/3', );
+        const response = await fetch ('/api/reservations', );
         const jsonResponse = await response.json();
         //console.log(jsonResponse);
-        setDuck( prev => {
+        setRice( prev => {
             return jsonResponse;
         })
       })();
@@ -56,12 +55,12 @@ export function Duck() {
 
       return (
           <div className="riceContent">
-            <header> <h1>Duck with onion</h1></header>
+            <header> <h1>Reservations</h1></header>
             
               <left id="left">
                  
                
-               <p>Reservation</p><br></br><br></br>
+               <p>add a new reservation</p><br></br><br></br>
               
                <label>Name:</label>
                <input type="text" onChange={(event) => {setName(event.target.value);
@@ -101,33 +100,28 @@ export function Duck() {
               <ul>
                    <li><Link to="/">main</Link></li>   
                    <li><Link to="/meals">meals</Link></li>
-                   <li><Link to="/meals/1">Rice</Link></li>
                    <li><Link to="/meals/2">Soup</Link></li>
+                   <li><Link to="/meals/3">Duck</Link></li>
                    <li><Link to="/meals/4">Fruit</Link></li>
-                   <li><Link to="/reservations">Reservations</Link></li>
+                   
                  </ul>
                   
                   
                
              {
-              duck.map(meal => {
+              rice.map(meal => {
               return (
-              <div className="meals">
+              <div className="mealsReservation">
                   
-               <li>{meal.title}</li> <br></br><br></br>
-               <li>{meal.description}</li> 
+               <li>name: {meal.name}</li> <br></br><br></br>
+               <li>phone: {meal.phone}</li> <br></br><br></br>
+               <li>email: {meal.email}</li> <br></br><br></br>
+               <li>Number of Guests: {meal.guests}</li> <br></br><br></br>
               </div>)
           })}
-          
-          <p>Duck and Onion Chutney Canapes
-            Easy and quick to prepare, these duck
-            and onion chutney canapes are a new tasty
-            appetizer ideas to serve for a classy brunch,
-            these duck and onion chutney canapes are a new tasty
-            appetizer ideas to serve for a classy brunch.</p>
-              </right>
+            </right>
 </div>
          
           
       );
-  }
+}
