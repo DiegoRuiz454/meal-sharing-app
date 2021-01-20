@@ -124,7 +124,7 @@ body .left{
   width: 42vw;
   margin-left:550px ;
   background-color: rgb(255, 255, 255);
-  padding-bottom: 40px ;
+  padding-bottom: 20px ;
   text-align: justify;
 }
 
@@ -200,12 +200,12 @@ body .right{
   margin-top:10px;
   height: auto;
   position: relative;
-  bottom:250mm;
+  bottom:260mm;
   right: 510px;
   width: 42vw;
   margin-left:550px ;
   background-color: rgb(255, 255, 255);
-  padding-bottom: 2px ;
+  padding-bottom: 20px ;
 }
  
 
